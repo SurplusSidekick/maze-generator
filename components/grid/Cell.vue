@@ -12,18 +12,22 @@
 <script>
 export default {
     props: {
-        cell: {
-            type: Object,
-            required: true
+        active: {
+            required: true,
+            type: Boolean
+        },
+        visited: {
+            required: true,
+            type: Boolean
+        },
+        targeted: {
+            required: true,
+            type: Boolean
         }
     },
 
-    data() {
-        return {
-            visited: this.cell.visited,
-            active: this.cell.active,
-            targeted: this.cell.targeted,
-        }
-    },
+    updated() {
+        console.log("updated cell")
+    }
 }
 </script>
